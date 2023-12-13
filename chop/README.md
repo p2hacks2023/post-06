@@ -1,3 +1,4 @@
 # chop
 
-Describe your project here.
+## run
+```$ rye run main```
