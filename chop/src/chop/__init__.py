@@ -1,2 +1,2 @@
 def hello():
-    return "Hello from chop!"
+    return "Hello from tukkomi!"
