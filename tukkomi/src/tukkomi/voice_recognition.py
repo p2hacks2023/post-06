@@ -1,6 +1,27 @@
-import speech_recognition as sr
+import os
 
-def speech_rec():
+import speech_recognition as sr
+from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
+from langchain.schema import HumanMessage
+from langchain.prompts import PromptTemplate
+
+llm = OpenAI(model_name="gpt-4")
+chat_model = ChatOpenAI()
+
+prompt = PromptTemplate.from_template("""
+あなたはお笑い界の大物です．
+次に渡される言葉がダジャレかどうか判定してください． 
+ダジャレだった場合は`True`、そうでない場合は`False`と答えてください．
+理解できない場合も`False`と答えてください．
+-------
+{boke}
+-------
+""")
+
+
+
+def speech_rec() -> str:
     r = sr.Recognizer()
     with sr.Microphone() as source:
         #print("---------------------------------------------------------------")
@@ -19,6 +40,17 @@ def speech_rec():
     else:
         return text
 
+def is_boke(boke: str) -> bool:
+    print("---------------------------------------------------------------")
+    print("boke: ", boke)
+    chain = prompt | llm
+
+    output = chain.invoke({"boke": boke})
+
+    print("output: ", output)
+    
+
+
 def main():
     while True:
         question = speech_rec()
@@ -28,7 +60,12 @@ def main():
 
 if __name__ == '__main__':
     print("-- VOICE RECOGNITION --")
-    main()
+    # main()
+    boke1 = "布団が吹っ飛んだ"
+    boke2 = "今日は暑い日だ"
+
+    is_boke(boke1)
+    is_boke(boke2)
 
 
 
