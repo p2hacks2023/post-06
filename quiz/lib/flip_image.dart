@@ -12,14 +12,10 @@ class FlipImage extends StatelessWidget {
     return Card(
       elevation: 0.0,
       margin: const EdgeInsets.only(left: 32.0, right: 32.0, top: 20.0, bottom: 0.0),
-      // color: Color(0x00000000),
       child: FlipCard(
         direction: FlipDirection.HORIZONTAL,
         side: CardSide.FRONT,
         speed: 700,
-        onFlipDone: (status) {
-          // print(status);
-        },
         front: Container(
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(8.0)),
@@ -30,16 +26,16 @@ class FlipImage extends StatelessWidget {
           ),
         ),
         back: Container(
-          decoration: const BoxDecoration(
-            color: Color(0xFF006666),
-            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          decoration: BoxDecoration(
+            color: Colors.lightGreen[100],
+            borderRadius: const BorderRadius.all(Radius.circular(8.0)),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('答え', style: Theme.of(context).textTheme.headlineLarge),
               const SizedBox(height: 20.0),
-              Text(text, style: Theme.of(context).textTheme.bodyLarge),
+              Text(text, style: Theme.of(context).textTheme.headlineSmall),
             ],
           ),
         ),
