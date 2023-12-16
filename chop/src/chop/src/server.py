@@ -1,19 +1,29 @@
-from concurrent import futures
-import grpc
-import sample_pb2
-import sample_pb2_grpc
+from fastapi import FastAPI
+from lib_servo import LobotServoController
+import time
 
-class Sample(sample_pb2_grpc.GreeterServicer):
-    def SayHello(self, request, context):
-        message = "Hello %s." % request.name
-        return sample_pb2.HelloReply(message=message)
+app = FastAPI()
 
-def run_server():
-    server = grpc.server(futures.ThreadPoolExecutor(max_workers=5))
-    sample_pb2_grpc.add_GreeterServicer_to_server(Sample(), server)
-    server.add_insecure_port('0.0.0.0:8080')
-    server.start()
-    server.wait_for_termination()
+HAND_ID = 7
+servoController = LobotServoController('/dev/ttyS0')  # UART通信のときのラズパイ3B+におけるシリアルポート
 
-if __name__ == '__main__':
-    run_server()
+
+# モーター制御のためのエンドポイント
+@app.post("/control_motor")
+async def control_motor():
+    # パラメータを含めずにモーターを制御
+    time.sleep(2) # デバイスの初期化待機
+    print("デバイスの初期化終了")
+    
+    servos = [{"ID": HAND_ID, "Position": 2400}]
+    servoController.moveServos(servos, 300) # 0.3sec
+    time.sleep(1)
+    servos = [{"ID": HAND_ID, "Position": 2600}] # Position is PWM
+    servoController.moveServos(servos, 1000) # 1sec
+    time.sleep(2)
+    
+    return {"status": "success"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
