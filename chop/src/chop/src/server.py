@@ -9,7 +9,7 @@ servoController = LobotServoController('/dev/ttyS0')  # UART通信のときの�
 
 
 # モーター制御のためのエンドポイント
-@app.post("/control_motor")
+@app.get("/control_motor")
 async def control_motor():
     # パラメータを含めずにモーターを制御
     time.sleep(2) # デバイスの初期化待機
