@@ -14,7 +14,7 @@ def main():
 
     os.system("afplay " + path)
 
-    time.sleep(30)
+    time.sleep(10)
 
 
 if __name__ == "__main__":
