@@ -1,3 +1,4 @@
 # tukkomi
 
-Describe your project here.
+## setup
+```$ export OPENAI_API_KEY=your_api_key```
