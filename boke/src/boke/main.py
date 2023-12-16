@@ -1,12 +1,21 @@
-from pathlib import Path
-from openai import OpenAI
-client = OpenAI()
+import os
+import glob
+import time
+import random
 
-speech_file_path = Path(__file__).parent / "speech.mp"
-response = client.audio.speech.create(
-  model="tts",
-  voice="alloy",
-  input="レモンの入れもん"
-)
+def main():
+  paths = glob.glob("data/speech/[!_]*.mp3")
 
-response.stream_to_file(speech_file_path)
+  random.shuffle(paths)
+
+  for path in paths:
+    file = path.split("/")[-1]
+    print(file)
+
+    os.system("afplay " + path)
+
+    time.sleep(30)
+
+
+if __name__ == "__main__":
+  main()
