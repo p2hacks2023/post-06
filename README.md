@@ -25,6 +25,9 @@
 ## スクリーンショット(任意)  
 ![oyaji gag quiz demo](https://github.com/p2hacks2023/post-06/assets/49859718/d44f3054-34e0-473a-b475-7b8970a7dcf4)
 
+<img width="897" alt="overall" src="https://github.com/p2hacks2023/post-06/assets/55681988/f2434c3c-6d9c-459f-bd40-56e47d71e284">
+
+
 ## 開発体制  
 
 役割分担  
