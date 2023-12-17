@@ -23,6 +23,7 @@
 おやじギャグのセンスの高さ．おやじの顔面のあご落としの芸術性．
 
 ## スクリーンショット(任意)  
+![oyaji gag quiz demo](https://github.com/p2hacks2023/post-06/assets/49859718/d44f3054-34e0-473a-b475-7b8970a7dcf4)
 
 ## 開発体制  
 
