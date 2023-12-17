@@ -1,8 +1,11 @@
 import os
+import time
 
 import speech_recognition as sr
 
 def speech_rec() -> str:
+    start = time.time()
+
     r = sr.Recognizer()
     with sr.Microphone() as source:
         #print("---------------------------------------------------------------")
@@ -19,6 +22,8 @@ def speech_rec() -> str:
         #    " {0}".format(e))
         return "***"
     else:
+        end = time.time()
+        print("voice_recognition time: " + str(end - start))
         return text
 
 
