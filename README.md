@@ -27,6 +27,8 @@
 
 <img width="897" alt="overall" src="https://github.com/p2hacks2023/post-06/assets/55681988/f2434c3c-6d9c-459f-bd40-56e47d71e284">
 
+![システム構成図概要](https://github.com/p2hacks2023/post-06/assets/55681988/977ebc97-6c3c-4210-bf7b-f84dc77b571f)
+
 
 ## 開発体制  
 
