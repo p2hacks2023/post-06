@@ -11,7 +11,7 @@ def main():
             print("-- GAG JUDEGEMENT --")
             res = gag_judegement.is_boke(boke)
             print("is boke" if res else "is not boke")
-            
+
             if res:
                 print("-- CONTROL MOTOR --")
                 control_motor.control_motor()

@@ -1,3 +1,5 @@
+import time
+
 from langchain_community.chat_models import ChatOpenAI
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain.prompts import PromptTemplate
@@ -17,6 +19,7 @@ human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
 
 
 def is_boke(boke: str) -> bool:
+    start = time.time()
     # print("---------------------------------------------------------------")
     # print("boke: ", boke)
     # chain = prompt | llm
@@ -29,6 +32,9 @@ def is_boke(boke: str) -> bool:
 
     # print("output: ", output.content)
     # print("output type: ", type(output))
+
+    end = time.time()
+    print("gag_judegement time: " + str(end - start))
 
     return output.content == "True"
 
