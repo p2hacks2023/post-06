@@ -75,7 +75,19 @@
 Python, Dart, Arduino言語
 
 ### 利用したフレームワーク・ライブラリ  
-Flutter, Fast API, LangChain, Servo
+Flutter: iOS,Androidに対応するため
+Fast API: 要件がシンプルなAPIサーバだったことから軽量かつ広範に利用されているため
+LangChain: OpenAIのAPIを利用するにあたってプロンプトなどを柔軟に設定しやすいため
+Servo: 角度を指定した動きを実現するため
+
 
 ### その他開発に使用したツール・サービス
-Raspberry Pi 3B+, Arduino Leonardo, 3Dプリンタ, 直流安定化電源, 圧力センサ, サーボドライバ, Fusion360, ChatGPT, OpenAI API, Google Speech to Text API
+Raspberry Pi 3B+: 触り慣れておりFastAPIとの連携がスムーズなため
+Arduino Leonardo: サーボモータと圧力センサーの制御が容易になるため
+3Dプリンタ: 高速にプロトタイプを作成するため
+直流安定化電源: モーターを精密に制御するため
+圧力センサ: チョップを検知するため
+Fusion360: 3Dプリンタに対応したファイル形式を作成しやすいため
+ChatGPT: 開発の効率を上げるため
+OpenAI API: GPT-4を使うため
+Google Speech to Text API: whisperよりも認識精度が高く，実装も容易だったため
