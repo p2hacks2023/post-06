@@ -74,4 +74,4 @@ Python, Dart, Arduino言語
 Flutter, Fast API, LangChain, Servo
 
 ### その他開発に使用したツール・サービス
-Raspberry Pi 3B+, Arduino Leonardo, 3Dプリンタ, 直流安定化電源, Fusion360, ChatGPT, OpenAI API
+Raspberry Pi 3B+, Arduino Leonardo, 3Dプリンタ, 直流安定化電源, Fusion360, ChatGPT, OpenAI API, google speech to text api
