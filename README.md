@@ -58,7 +58,7 @@
 Python, Dart, Arduino言語
 
 ### 利用したフレームワーク・ライブラリ  
-Flutter, Fast API, LangChain
+Flutter, Fast API, LangChain, Servo
 
 ### その他開発に使用したツール・サービス
 Raspberry Pi 3B+, Arduino Leonardo, 3Dプリンタ，ChatGPT, OpenAI API
