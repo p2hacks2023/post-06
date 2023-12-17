@@ -29,6 +29,8 @@
 
 ![システム構成図概要](https://github.com/p2hacks2023/post-06/assets/55681988/977ebc97-6c3c-4210-bf7b-f84dc77b571f)
 
+![Videotogif](https://github.com/p2hacks2023/post-06/assets/55681988/213ff9c3-a560-471f-862e-e7684aa9b54c)
+
 
 ## 開発体制  
 
